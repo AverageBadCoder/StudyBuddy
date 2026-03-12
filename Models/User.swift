@@ -5,39 +5,39 @@ class User: Account{
         //blank for now
     }
 
-    createQuestion(){
+    func createQuestion(){
         //empty for now
     }
 
-    removeQuestion(){
+    func removeQuestion(){
         //empty for now
     }
 
-    editQuestion(){
+    func editQuestion(){
         //empty for now
     }
 
-    submitAnswer(){
+    func submitAnswer(){
         //empty for now
     }
 
-    editAnswer(){
+    func editAnswer(){
         //empty for now
     }
 
-    deleteAnswer(){
+    func deleteAnswer(){
         //empty for now
     }
 
-    voteAnswer(){
+    func voteAnswer(){
         //empty for now
     }
 
-    addBadge(){
+    func addBadge(){
         //empty for now
     }
 
-    updateBadge(){
+    func updateBadge(){
         //empty for now
     }
 
