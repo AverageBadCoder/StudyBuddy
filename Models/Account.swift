@@ -9,7 +9,7 @@ enum AccountError: Error {
 
 /// Working Account model with hashed password (SHA256 + salt),
 /// secure random 16-character id, simple login/logout and password change.
-final class Account: Codable {
+class Account: Codable {
     var id: String
     var email: String
     private(set) var passwordHash: String
