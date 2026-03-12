@@ -1,15 +1,19 @@
-class repBadges{
+class ReputationBadge {
     var badgeLevel: Int
     var badgeName: String
     var badgeDescription: String
     var badgeIcon: String
-    var badgeType: String //maybe not string
+    var badgeType: String
 
-    init(){
-        badgeLevel = self.badgeLevel
-        badgeName = self.badgeName
-        badgeDescription = self.badgeDescription
-        badgeIcon = self.badgeIcon
-        badgeType = self.badgeType
+    init(badgeLevel: Int = 0,
+         badgeName: String = "",
+         badgeDescription: String = "",
+         badgeIcon: String = "",
+         badgeType: String = "") {
+        self.badgeLevel = badgeLevel
+        self.badgeName = badgeName
+        self.badgeDescription = badgeDescription
+        self.badgeIcon = badgeIcon
+        self.badgeType = badgeType
     }
 }
