@@ -3,7 +3,7 @@ class Response{
     var responseID: String
     var questionID: String
     var userID: String
-    var timeSincePost: TimeInterval
+    var timeSincePost: Int
     var numLikes: Int
     var numDislikes: Int
 

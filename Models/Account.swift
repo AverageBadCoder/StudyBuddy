@@ -13,7 +13,7 @@ class Account: Codable {
     var id: String
     var email: String
     private(set) var passwordHash: String
-    private var salt: String
+    var salt: String
     var verified: Bool
     var isAdmin: Bool
     /// Optional session token set on successful login
@@ -29,6 +29,23 @@ class Account: Codable {
         self.passwordHash = Account.hash(password: password, salt: self.salt)
         self.verified = false
         self.isAdmin = isAdmin
+    }
+
+    // Rehydrate initializer (used by Supabase store / decoding from DB)
+    init(id: String,
+         email: String,
+         passwordHash: String,
+         salt: String,
+         verified: Bool = false,
+         isAdmin: Bool = false,
+         sessionToken: String? = nil) {
+        self.id = id
+        self.email = email
+        self.passwordHash = passwordHash
+        self.salt = salt
+        self.verified = verified
+        self.isAdmin = isAdmin
+        self.sessionToken = sessionToken
     }
 
     // MARK: - Authentication
@@ -128,4 +145,4 @@ class Account: Codable {
 //     acct.verifyCollege(college: "university")
 // } catch {
 //     print("account error:", error)
-//
+// }

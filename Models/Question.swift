@@ -2,8 +2,8 @@ class Questions{
     var questionText: String
     var questionID: String
     var courseID: String
-    var timeSincePost: TimeInterval
-    var deadline: Date
+    var timeSincePost: Int
+    var deadline: String
     var answers: [String] //use ids for each answer
 
     init(){
