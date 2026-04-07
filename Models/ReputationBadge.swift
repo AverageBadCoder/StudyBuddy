@@ -1,4 +1,4 @@
-class ReputationBadge {
+class ReputationBadge: Codable {
     var badgeLevel: Int
     var badgeName: String
     var badgeDescription: String
